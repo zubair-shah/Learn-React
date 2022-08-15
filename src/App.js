@@ -3,7 +3,7 @@ import SearchParams from "./SearchParam";
 import "./App.css";
 import Pet from "./Pet";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Details from "./Details";
+import WrapdDetails from "./Details";
 
 function App() {
   return (
@@ -11,11 +11,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SearchParams />} />
-          <Route path="/details/:id" element={<Details />} />
+          <Route path="/details/:id" element={<WrapdDetails />} />
         </Routes>
+        {/* <Pet name="Luna" breed="havanees" animal="dog" /> */}
+        {/* <SearchParams /> */}
       </BrowserRouter>
-      {/* <Pet name="Luna" breed="havanees" animal="dog" />
-      <SearchParams /> */}
     </>
   );
 }
