@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { Link, Navigate } from "react-router-dom";
-
 class Errorboundries extends Component {
   state = { hasError: false, redirect: false };
 
@@ -31,8 +30,8 @@ class Errorboundries extends Component {
         </h2>
       );
     }
+    return this.props.chilren;
   }
 }
-
 
 export default Errorboundries;

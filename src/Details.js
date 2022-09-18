@@ -24,10 +24,9 @@ export class Details extends Component {
       return <h3> Loading ...</h3>;
     }
 
-    throw new Error(" your app is crashed");
+    // throw new Error(" your app is crashed");
     const { name, breed, city, state, description, animal, images } =
-    this.state;
-
+      this.state;
     return (
       <div className="details">
         <Carousel images={images} />
@@ -49,9 +48,9 @@ const WrapdDetails = () => {
   const params = useParams();
 
   return;
-  <Errorboundries>
-    <Details params={params} />;
-  </Errorboundries>;
+  <Details params={params} />;
+  // <Errorboundries>
+  // </Errorboundries>;
 };
 
 export default WrapdDetails;
