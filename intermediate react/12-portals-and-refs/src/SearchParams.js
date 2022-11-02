@@ -27,8 +27,9 @@ const SearchParams = () => {
   }
 
   return (
-    <div className="search-params">
+    <div className="search-params mx-0 my-auto w-11/12">
       <form
+        className="P-10 mb-10 rounded-lg bg-gray-200 shadow-lg flex flex-col justify-cent"
         onSubmit={(e) => {
           e.preventDefault();
           requestPets();
@@ -39,8 +40,10 @@ const SearchParams = () => {
           <input
             id="location"
             value={location}
+            type="text"
             placeholder="Location"
             onChange={(e) => updateLocation(e.target.value)}
+            className="w-60 mb-5 block"
           />
         </label>
         <label htmlFor="animal">
@@ -56,6 +59,7 @@ const SearchParams = () => {
               updateAnimal(e.target.value);
               updateBreed("");
             }}
+            className="w-60 mb-5 block"
           >
             <option />
             {ANIMALS.map((animal) => (
@@ -71,6 +75,8 @@ const SearchParams = () => {
             disabled={!breeds.length}
             id="breed"
             value={breed}
+            className="w-60 mb-5 block"
+            // className="'disbled:opacity-50 "
             onChange={(e) => updateBreed(e.target.value)}
             onBlur={(e) => updateBreed(e.target.value)}
           >
@@ -88,6 +94,7 @@ const SearchParams = () => {
             value={theme}
             onChange={(e) => setTheme(e.target.value)}
             onBlur={(e) => setTheme(e.target.value)}
+            className="w-60 mb-5 block"
           >
             <option value="peru">Peru</option>
             <option value="darkblue">Dark Blue</option>
@@ -95,7 +102,12 @@ const SearchParams = () => {
             <option value="mediumorchid">Medium Orchid</option>
           </select>
         </label>
-        <button style={{ backgroundColor: theme }}>Submit</button>
+        <button
+          className="rounded px-6 py-2 color text-white hover:opacity-50 border-none"
+          style={{ backgroundColor: theme }}
+        >
+          Submit
+        </button>
       </form>
       <Results pets={pets} />
     </div>

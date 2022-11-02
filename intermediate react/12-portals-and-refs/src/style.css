@@ -1,4 +1,10 @@
-* {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* * {
   box-sizing: border-box;
   color: #333;
 }
@@ -332,4 +338,4 @@ header {
     width: 60px;
     height: 60px;
   }
-}
+} */

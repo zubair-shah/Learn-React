@@ -3,8 +3,8 @@ import { useState, StrictMode, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ThemeContext from "./ThemeContext";
 
-const Details = lazy(() => import("./Details"));
-const SearchParams = lazy(() => import("./SearchParams"));
+const Details = lazy(() => import("./Details"));  //dynamic import 
+const SearchParams = lazy(() => import("./SearchParams")); //dynamic importn
 
 const App = () => {
   const theme = useState("darkblue");
